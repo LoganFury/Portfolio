@@ -1,17 +1,14 @@
-// Contact form submission
 document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault();
-    alert("Thank you for reaching out! Your message has been sent successfully.");
-    document.getElementById("contact-form").reset();
+    
+    // Add your logic here to handle form submission (e.g., sending an email)
+    alert("Message sent successfully!");
 });
 
-// Smooth scrolling
-document.querySelectorAll("nav a").forEach(anchor => {
-    anchor.addEventListener("click", function (event) {
-        event.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-        }
-    });
+// Responsive navigation menu
+const menuIcon = document.getElementById("menu-icon");
+const nav = document.querySelector("nav");
+
+menuIcon.addEventListener("click", () => {
+    nav.style.display = (nav.style.display === "flex") ? "none" : "flex";
 });
